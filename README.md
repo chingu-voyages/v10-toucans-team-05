@@ -1,7 +1,13 @@
 # v10-toucans-team-05
 
-Add-project-description-here | Voyage-10 | https://chingu.io/
+Momentum Clone| Voyage-10 | https://chingu.io/
 
-Team Members
+## Team Members
 
-#### Vonetta Stevenson
+Vonetta Stevenson
+
+Kat Batuigas
+
+# Project Info
+
+- Background - Unsplash Random Daily Image
