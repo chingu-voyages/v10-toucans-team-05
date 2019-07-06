@@ -1,0 +1,6 @@
+body {
+  background-image: url("https://source.unsplash.com/daily");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Helvetica-Neue", "Arial", sans-serif;
+}
