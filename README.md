@@ -10,4 +10,5 @@ Kat Batuigas
 
 # Project Info
 
+- Font Styling - Helvetica Neue
 - Background - Unsplash Random Daily Image
