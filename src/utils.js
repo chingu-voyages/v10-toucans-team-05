@@ -13,13 +13,13 @@ export function getCurrLocation() {
         console.log('geolocation on');
 
         return new Promise((resolve, reject) => { 
-            let lat, long, API_URL;
+            let lat, long, apiUrl;
             navigator.geolocation.getCurrentPosition(pos => {  
                 resolve(
                     [
                         lat = pos.coords.latitude,
                         long = pos.coords.longitude,
-                        API_URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`
+                        apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`
                     ]
                 )},
                 error => { reject(geo_error) }
@@ -30,6 +30,15 @@ export function getCurrLocation() {
 }
 
 export function callWeatherApi(val) {
-    console.log('api url here', val[2]);
+    //console.log('api url here', val[2]);
+    const url = val[2];
+    return fetch(url).then(resp => {
+        console.log(resp);
+        if (resp.ok) {
+            return resp.json();
+        } else {
+            return Promise.reject("Openweathermap data unable to load");
+        }
+        }).catch(error => console.log('Error: ', error));
     
 }
