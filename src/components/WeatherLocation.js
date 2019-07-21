@@ -1,17 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class WeatherLocation extends Component {
-    constructor(props) {
-        super(props);
-    }
+const WeatherLocation = (props) => {
 
-    render () {
-        return (
-            <div className="current-location">
-            </div>
-        )
-    }
+    return (
+        <div className="current-location">
+        </div>
+    )
 
 }
 

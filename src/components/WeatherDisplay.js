@@ -1,18 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-class WeatherDisplay extends Component {
-    constructor(props) {
-        super(props);
-    }
+const WeatherDisplay = (props) => {
 
-    render () {
-        return (
-            <div className="current-weather">
-            </div>
-        )
-    }
-
+    return (
+        <div className="current-weather">
+        </div>
+    )
+    
 }
 
 export default WeatherDisplay
