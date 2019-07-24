@@ -11,16 +11,32 @@ import WeatherLocation from "./WeatherLocation";
     // separate location and weather into different child components?
 // additional component for weather lightbox upon clicking weather icon?
 class Weather extends Component {
+    constructor(props) {
+        super(props);
+        //console.log(this.props);
+    }
+
     componentDidMount() {
         getCurrLocation().then(values => {
-            callWeatherApi(values);
+            return callWeatherApi(values)   
+        }).then(data => {
+            console.log(JSON.stringify(data));
+            let currLocation = data.name;
+            console.log(currLocation);
+
+            let currTemp = data.main.temp;
+
+            //need to pass down location and temp to WeatherDisplay and weatherLocation
+            this.currLocation = currLocation;
+            this.currTemp = currTemp;
+        
         }).catch(e => { console.log(e)});
     }
 
     render() {
         return(
             <div id="weather">
-                <WeatherDisplay />
+                <WeatherDisplay temp={this.props.currTemp} />
                 <WeatherLocation />
             </div>
         )

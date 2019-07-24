@@ -30,10 +30,10 @@ export function getCurrLocation() {
 }
 
 export function callWeatherApi(val) {
-    //console.log('api url here', val[2]);
+    console.log('api url here', val[2]);
     const url = val[2];
     return fetch(url).then(resp => {
-        console.log(resp);
+        //console.log(resp);
         if (resp.ok) {
             return resp.json();
         } else {
