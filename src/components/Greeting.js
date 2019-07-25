@@ -2,8 +2,8 @@ import React from "react";
 
 const Greeting = () => {
   //get name
-  let name = prompt("What is your name?");
-
+  // let name = prompt("What is your name?");
+let name="Vonetta"
   //get time
   const time = new Date();
   let hours = time.getHours();
@@ -13,7 +13,6 @@ const Greeting = () => {
 
   //get greeting
   const getGreeting = hours => {
-    console.log(hours);
     if (hours < "12") {
       return "morning";
     } else if (hours < "17") {

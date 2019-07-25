@@ -30,12 +30,11 @@ export function getCurrLocation() {
 }
 
 export function callWeatherApi(val) {
-    console.log('api url here', val[2]);
+ 
     const url = val[2];
     return fetch(url).then(resp => {
-        //console.log(resp);
         if (resp.ok) {
-            return resp.json();
+            return resp.json()
         } else {
             return Promise.reject("Openweathermap data unable to load");
         }
