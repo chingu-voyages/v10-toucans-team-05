@@ -1,12 +1,12 @@
 import React from 'react'
 
-
 const WeatherLocation = (props) => {
-    console.log(typeof props.curr, "weather location");
+ let iconName = props.curr.icon.map(item => {
+   return item.main} ).toString()
     return (
-        
-        <div className="current-location">
-      {props.curr}
+      <div className="current-location white">
+
+      {`${props.curr.temp}°`}
         </div>
     )
 

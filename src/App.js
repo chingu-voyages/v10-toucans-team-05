@@ -14,7 +14,8 @@ constructor(props){
   this.state = {
 data:{
   name: "",
-  temp: ""
+  temp: "",
+  icon: []
 }
   }
 }
@@ -22,10 +23,13 @@ data:{
         let temp = getCurrLocation().then(values => {
             return callWeatherApi(values)   
         }).then(data => {
+    
+          let far = (((+data.main.temp) - 273.15) * 9/5 + 32).toFixed(0)
             this.setState({
               data:{
-                name:data.name,
-              temp: data.main.temp
+              name:data.name,
+              temp: far,
+              icon: data.weather
           }
         })
       })
