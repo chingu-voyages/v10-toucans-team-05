@@ -19,7 +19,7 @@ export function getCurrLocation() {
                     [
                         lat = pos.coords.latitude,
                         long = pos.coords.longitude,
-                        apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`
+                        apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${API_KEY}`
                     ]
                 )},
                 error => { reject(geo_error) }

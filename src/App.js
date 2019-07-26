@@ -24,11 +24,11 @@ data:{
             return callWeatherApi(values)   
         }).then(data => {
     
-          let far = (((+data.main.temp) - 273.15) * 9/5 + 32).toFixed(0)
+          // let far = (((+data.main.temp) - 273.15) * 9/5 + 32).toFixed(0)
             this.setState({
               data:{
               name:data.name,
-              temp: far,
+              temp: data.main.temp.toFixed(0),
               icon: data.weather
           }
         })

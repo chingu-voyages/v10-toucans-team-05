@@ -5,7 +5,6 @@ const WeatherLocation = (props) => {
    return item.main} ).toString()
     return (
       <div className="current-location white">
-
       {`${props.curr.temp}°`}
         </div>
     )
