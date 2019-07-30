@@ -3,7 +3,7 @@ import React from "react";
 const Greeting = () => {
   //get name
   // let name = prompt("What is your name?");
-let name="Vonetta"
+  let name = "Vonetta";
   //get time
   const time = new Date();
   let hours = time.getHours();
@@ -25,7 +25,7 @@ let name="Vonetta"
   let greeting = getGreeting(hours);
   return (
     <>
-      <section className="greeting">
+      <section className="greeting white">
         <div>
           <h2>
             {hours}:{minutes}

@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("https://source.unsplash.com/daily?animal");
   background-size: cover;
@@ -8,24 +12,54 @@ body {
 .greeting {
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
 }
 
-.white{
-  color: #fff;
-}
-
-.greeting h2,
-.greeting p {
-  font-size: 10rem;
+.white {
   color: #fff;
   text-shadow: 1px 1px 1px black;
+}
+
+.greeting h2 {
+  font-size: 10rem;
 }
 
 .greeting p {
   margin-top: -30px;
   font-size: 3rem;
+}
+
+/* todo section */
+
+.todo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+[class*="input-"] {
+  border: none;
+  background: transparent;
+  border-bottom: 3px white solid;
+  width: 28%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+[class*="input-"]:focus {
+  outline: none;
+  caret-color: #fff;
+}
+
+.todo input:checked ~ .custom-checkbox {
+  text-decoration: line-through;
+}
+
+.main-goal-item {
+  font-size: 1.5rem;
 }

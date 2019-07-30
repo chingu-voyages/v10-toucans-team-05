@@ -3,48 +3,50 @@ import "./styling/App.css";
 
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
+import MainGoal from "./components/MainGoal";
 
-import { getCurrLocation, callWeatherApi } from './utils.js';
+import { getCurrLocation, callWeatherApi } from "./utils.js";
 
-class App extends React.Component{
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-constructor(props){
-  super(props)
-
-  this.state = {
-data:{
-  name: "",
-  temp: "",
-  icon: []
-}
+    this.state = {
+      data: {
+        name: "",
+        temp: "",
+        icon: []
+      }
+    };
   }
-}
-  componentDidMount(){
-        let temp = getCurrLocation().then(values => {
-            return callWeatherApi(values)   
-        }).then(data => {
-    
-          // let far = (((+data.main.temp) - 273.15) * 9/5 + 32).toFixed(0)
-            this.setState({
-              data:{
-              name:data.name,
-              temp: data.main.temp.toFixed(0),
-              icon: data.weather
-          }
-        })
+  componentDidMount() {
+    getCurrLocation()
+      .then(values => {
+        return callWeatherApi(values);
       })
-        .catch(e => { console.log(e)});
-    }
-  
-  render(){
-    return(
+      .then(data => {
+        this.setState({
+          data: {
+            name: data.name,
+            temp: data.main.temp.toFixed(0),
+            icon: data.weather
+          }
+        });
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+
+  render() {
+    return (
       <div className="app">
-      <Greeting />
-      <Weather temp={this.state.data}/>  
-    </div>
-    )
+        <Greeting />
+        <MainGoal />
+        <Weather temp={this.state.data} />
+      </div>
+    );
   }
 }
-
 
 export default App;
