@@ -1,12 +1,16 @@
 import React from "react";
 
-const WeatherLocation = props => {
-  props.curr.icon
-    .map(item => {
-      return item.main;
-    })
-    .toString();
-  return <div className="current-location white">{`${props.curr.temp}°`}</div>;
+const WeatherLocation = ({ curr, icon }) => {
+  return (
+    <div className="current-location">
+      <img
+        src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+        width="50"
+        alt="Weather Icon based on forecast"
+      />
+      {`${parseInt(curr)}°`}
+    </div>
+  );
 };
 
 export default WeatherLocation;
