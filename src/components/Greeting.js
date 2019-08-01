@@ -25,7 +25,7 @@ const Greeting = () => {
   let greeting = getGreeting(hours);
   return (
     <>
-      <section className="greeting">
+      <section className="greeting white">
         <div>
           <h2>
             {hours}:{minutes}

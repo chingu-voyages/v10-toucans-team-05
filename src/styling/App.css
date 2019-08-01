@@ -1,4 +1,6 @@
+
 /* universal */
+
 html {
   box-sizing: border-box;
 }
@@ -16,20 +18,17 @@ body {
   color: #fff;
 }
 
-/* greeting */
+/* greeting section */
 .greeting {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 60vh;
 }
 
-.greeting h2,
-.greeting p {
+.greeting h2 {
   font-size: 10rem;
-  color: #fff;
-  text-shadow: 1px 1px 1px black;
 }
 
 .greeting p {
@@ -37,7 +36,39 @@ body {
   font-size: 3rem;
 }
 
-/* Weather */
+/* todo section */
+
+.todo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+[class*="input-"] {
+  border: none;
+  background: transparent;
+  border-bottom: 3px white solid;
+  width: 28%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+[class*="input-"]:focus {
+  outline: none;
+  caret-color: #fff;
+}
+
+.todo input:checked ~ .custom-checkbox {
+  text-decoration: line-through;
+}
+
+.main-goal-item {
+  font-size: 1.5rem;
+
+/* Weather section*/
 .weather {
   display: flex;
   flex-flow: column nowrap;
@@ -49,4 +80,5 @@ body {
 .current-weather {
   font-size: 14px;
   margin-top: -10px;
+
 }
