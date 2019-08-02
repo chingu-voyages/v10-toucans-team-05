@@ -1,21 +1,28 @@
-body {
-  background-image: url("https://source.unsplash.com/daily?animal");
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: "Helvetica-Neue", "Arial", sans-serif;
+/* universal */
+html {
+  box-sizing: border-box;
 }
 
+body {
+  background-image: url("https://source.unsplash.com/daily?mountains");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1%;
+}
+
+.white {
+  color: #fff;
+}
+
+/* greeting */
 .greeting {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-.white{
-  color: #fff;
+  height: 70vh;
 }
 
 .greeting h2,
@@ -28,4 +35,18 @@ body {
 .greeting p {
   margin-top: -30px;
   font-size: 3rem;
+}
+
+/* Weather */
+.weather {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 1.625rem;
+}
+
+.current-weather {
+  font-size: 14px;
+  margin-top: -10px;
 }
