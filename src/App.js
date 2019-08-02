@@ -10,9 +10,9 @@ const App = () => {
     <div className="app">
       <Weather />
       <Greeting />
+      <MainGoal />
     </div>
   );
 };
-
 
 export default App;
