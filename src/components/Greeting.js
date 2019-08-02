@@ -1,10 +1,13 @@
 import React from "react";
 
 const Greeting = () => {
-  //get name
-  let name = prompt("What is your name?");
-  localStorage.setItem("name", name);
-  // let name = "Vonetta";
+  //get name - using local storage
+  let name = localStorage.getItem("name");
+  if (!name) {
+    name = prompt("Please enter your name");
+    localStorage.setItem("name", name);
+  }
+
   //get time
   const time = new Date();
   let hours = time.getHours();
@@ -34,7 +37,7 @@ const Greeting = () => {
         </div>
         <div>
           <p>
-            Good {greeting}, {localStorage.getItem("name")}
+            Good {greeting}, {name}
           </p>
         </div>
       </section>
