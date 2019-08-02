@@ -8,11 +8,11 @@ import MainGoal from "./components/MainGoal";
 const App = () => {
   return (
     <div className="app">
-      <Weather />
+      {/* <Weather /> */}
       <Greeting />
+      <MainGoal />
     </div>
   );
 };
-
 
 export default App;
