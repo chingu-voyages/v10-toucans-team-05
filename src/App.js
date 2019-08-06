@@ -4,13 +4,15 @@ import "./styling/App.css";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
 import MainGoal from "./components/MainGoal";
+import Todo from "./components/Todo";
 
 const App = () => {
   return (
     <div className="app">
-      {/* <Weather /> */}
+      <Weather />
       <Greeting />
       <MainGoal />
+      <Todo />
     </div>
   );
 };

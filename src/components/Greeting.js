@@ -3,7 +3,7 @@ import React from "react";
 const Greeting = () => {
   //get name - using local storage
   let name = localStorage.getItem("name");
-  if (!name || name == "null") {
+  if (!name || name === "null") {
     name = prompt("Please enter your name");
     localStorage.setItem("name", name);
   }
