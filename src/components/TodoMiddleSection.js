@@ -16,7 +16,7 @@ const TodoMiddleSection = () => {
           </a>
         </div>
         <button
-          className="btn btn-default white new-todo-btn"
+          className="btn btn-default white gray-button"
           onClick={showInputBox}>
           New Todo
         </button>

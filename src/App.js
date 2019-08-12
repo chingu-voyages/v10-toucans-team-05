@@ -1,17 +1,15 @@
 import React from "react";
 import "./styling/App.css";
+import TopContainer from "./components/TopContainer";
+import MiddleContainer from "./components/MiddleContainer";
 
-import Greeting from "./components/Greeting";
-import Weather from "./components/Weather";
-import MainGoal from "./components/MainGoal";
 import Todo from "./components/Todo";
 
 const App = () => {
   return (
     <div className="app">
-      <Weather />
-      <Greeting />
-      <MainGoal />
+      <TopContainer />
+      <MiddleContainer />
       <Todo />
     </div>
   );

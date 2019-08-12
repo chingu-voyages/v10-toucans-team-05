@@ -1,20 +1,8 @@
 import React, { useState } from "react";
 import TodoMiddleSection from "./TodoMiddleSection";
-
+import { showDropdown } from "../utils";
 const TodoLightBox = () => {
   const [todoList, setTodoList] = useState([]);
-
-  const showDropdown = index => {
-    let dropdown = document.getElementsByClassName(
-      "todo-list-dropdown-options"
-    );
-
-    if (dropdown[index].style.display === "block") {
-      dropdown[index].style.display = "none";
-    } else {
-      dropdown[index].style.display = "block";
-    }
-  };
 
   const deleteItem = index => {
     todoList.splice(index, 1);
@@ -73,7 +61,7 @@ const TodoLightBox = () => {
                   </label>
                 </span>
 
-                <div className="todo-list-dropdown-options">
+                <div className=" dropdown todo-list-dropdown-options">
                   <p
                     className="dropdown-item white"
                     value="edit"
@@ -98,7 +86,9 @@ const TodoLightBox = () => {
                 <i
                   key={index}
                   className="fas fa-ellipsis-h sub-ellipsis white"
-                  onClick={() => showDropdown(index)}
+                  onClick={() =>
+                    showDropdown(index, "todo-list-dropdown-options")
+                  }
                 />
               </div>
             </section>
