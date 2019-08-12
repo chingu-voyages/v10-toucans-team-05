@@ -7,11 +7,17 @@ const Quote = () => {
 
     useEffect(() => {
         async function getQuote() {
-            //let quoteText = await callQuoteApi();
-            let quoteText = "Wherever a man turns he can find someone who needs him.  ".trim();
-            setQuote(quoteText); 
-            let api_response = await callQuoteApi();
-            console.log(api_response);
+            let quoteText = localStorage.getItem("qod");
+            if ((!quoteText) || (quoteText.length === 0)) {
+                let quoteResponse = await callQuoteApi();
+                let quoteText = quoteResponse.contents.quotes[0].quote.trim();
+                
+                setQuote(quoteText);
+                localStorage.setItem("qod", quoteText);
+            } else {
+                setQuote(quoteText);
+                console.log("Quote stored in local web storage");
+            }
         }
         getQuote();
     }, []
@@ -19,7 +25,7 @@ const Quote = () => {
 
     return (
         <section className="quote mt-5">
-            <p className="quote-text text-white text-justify font-italic">"{quote}"</p>
+            <p className="quote-text text-white text-justify">"{quote}"</p>
         </section>
     );
 }
