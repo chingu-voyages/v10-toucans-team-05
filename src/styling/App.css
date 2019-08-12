@@ -11,6 +11,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 1%;
+  height: 100vh;
+}
+
+.hide {
+  display: none !important;
 }
 
 .white {
@@ -23,7 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  margin-top: 8%;
 }
 
 .greeting h2 {
@@ -35,20 +40,25 @@ body {
   font-size: 3rem;
 }
 
-/* todo section */
+/* main goal section */
 
-.todo {
+.main-goal {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
+.main-goal h2 {
+  font-weight: normal;
+}
+
 [class*="input-"] {
   border: none;
   background: transparent;
   border-bottom: 3px white solid;
-  width: 28%;
+  width: 100%;
+  max-width: 400px;
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
@@ -60,12 +70,14 @@ body {
   caret-color: #fff;
 }
 
-.todo input:checked ~ .custom-checkbox {
+.main-goal input:checked ~ .custom-checkbox,
+.todo-mini-item input:checked ~ .custom-todo-checkbox {
   text-decoration: line-through;
 }
 
 .main-goal-item {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  margin-left: 10px;
 }
 /* Weather section*/
 .weather {
@@ -80,8 +92,117 @@ body {
   font-size: 14px;
   margin-top: -10px;
 }
+/*quote section */
 
 .quote {
   display: flex;
   justify-content: center;
 }
+
+/* todo section */
+.todo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 27vh;
+}
+
+.todo h4 {
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.todo-lightbox {
+  background-color: rgba(15, 15, 15, 0.925);
+  border-radius: 5px;
+  padding: 1% 1% 15px;
+  width: 320px;
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  bottom: 8%;
+  right: 1%;
+}
+
+.todo-top-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.todo-middle-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.new-todo-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 0.875rem;
+}
+
+.todo-inbox-link {
+  margin-top: -5%;
+  padding-bottom: 5%;
+  font-size: 13px;
+}
+
+.todo-input-box,
+.todo-mini-input-box {
+  border: none;
+  color: #ccc;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.todo-mini-input-box::placeholder {
+  color: #ccc;
+}
+
+.custom-todo-checkbox {
+  color: #ccc;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: -1px;
+  width: 110px;
+}
+
+.todo-mini-item {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.todo-list-dropdown-options {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 125px;
+  padding: 1%;
+  border-radius: 5px;
+  position: relative;
+  top: 28px;
+  right: 14px;
+  display: none;
+  z-index: 999;
+}
+
+.sub-ellipsis {
+  margin-top: 21px;
+  transition: opacity 0.3s;
+}
+.fa-ellipsis-h:hover {
+  cursor: pointer;
+  background: gray;
+  border-radius: 100%;
+  padding: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: 22px;
+}
+
+.dropdown-item {
+  font-size: 0.875rem;
+  margin-bottom: -7px;
+  padding: 5px;
+}
+
