@@ -4,6 +4,7 @@ import "./styling/App.css";
 import Greeting from "./components/Greeting";
 import Weather from "./components/Weather";
 import MainGoal from "./components/MainGoal";
+import Quote from "./components/Quote";
 import Todo from "./components/Todo";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Weather />
       <Greeting />
       <MainGoal />
+      <Quote />
       <Todo />
     </div>
   );

@@ -92,6 +92,12 @@ body {
   font-size: 14px;
   margin-top: -10px;
 }
+/*quote section */
+
+.quote {
+  display: flex;
+  justify-content: center;
+}
 
 /* todo section */
 .todo {
@@ -199,3 +205,4 @@ body {
   margin-bottom: -7px;
   padding: 5px;
 }
+
