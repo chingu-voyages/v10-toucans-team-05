@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { showDropdown } from "../utils";
 import google from "../imgs/google.png";
 import bing from "../imgs/bing.png";
@@ -35,7 +35,7 @@ const Search = () => {
   ]);
   const [newInputName, setNewInputName] = useState("");
   const [newLinkName, setNewLinkName] = useState("");
-
+  const [currentBrowser, setCurrentBrowser] = useState("google");
   const captureNameValue = e => {
     setNewInputName(e.target.value);
   };
@@ -49,28 +49,19 @@ const Search = () => {
     showDropdown(0, "new-link-lightbox");
   };
 
-  const keyPress = (e, url) => {
+  const keyPress = e => {
     if (e.which === 13) {
-      window.open(`http://${url}.com/search?q=${newInputName}`);
+      if (currentBrowser == "DuckDuckGo") {
+        window.open(
+          `http://${currentBrowser.toLowerCase()}.com/?q=${newInputName}`
+        );
+      } else {
+        window.open(
+          `http://${currentBrowser.toLowerCase()}.com/search?q=${newInputName}`
+        );
+      }
     }
   };
-
-  useEffect(() => {
-    async function getAuthor() {
-      const response = await fetch(
-        "https://source.unsplash.com/daily?mountains",
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          }
-        }
-      );
-      const json = await response.json();
-      console.log(json);
-    }
-    getAuthor();
-  }, []);
 
   return (
     <>
@@ -82,57 +73,30 @@ const Search = () => {
         </p>
 
         <i className="fas fa-search white" />
-        {/* <section>
+        <section>
           <input
             type="text"
-            className="search-input-box"
+            className="search-input-box input-box"
             onChange={captureNameValue}
-            onKeyPress={e => keyPress(e, "bing")}
+            onKeyPress={e => keyPress(e)}
           />
           <div className=" search-dropdown-browser-options">
-            <select>
-              <span className="white">Search with...</span>
+            {/* <span className="white">Search with...</span> */}
+            <select
+              className="white"
+              onChange={e => setCurrentBrowser(e.target.value)}>
               {browsers.map((browser, index) => (
                 <option
                   key={index}
-                  onClick={() => window.open(browser.link)}
                   value={browser.name}
-                  className="dropdown-item white">
+                  className="dropdown-item">
                   {browser.name}
+                  {console.log(currentBrowser)}
                 </option>
               ))}
             </select>
           </div>
-        </section> */}
-
-        {/* <section className="input-group"> */}
-        <input
-          type="text"
-          className="form-control search-input-box"
-          aria-label="Text input with dropdown button"
-          onChange={captureNameValue}
-          onKeyPress={e => keyPress(e, "bing")}
-        />
-        {/* <div className="input-group-append"> */}
-        <button
-          className="btn dropdown-toggle"
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Dropdown
-        </button>
-        <div className="dropdown-menu">
-          <p>Search With</p>
-          {browsers.map((browser, index) => (
-            <a key={index} className="dropdown-item" href="#">
-              <img width="15" src={browser.icon} alt={browser.name} />
-              {browser.name}
-            </a>
-          ))}
-        </div>
-        {/* </div> */}
-        {/* </section> */}
+        </section>
       </div>
 
       <div className="dropdown search-dropdown-options">

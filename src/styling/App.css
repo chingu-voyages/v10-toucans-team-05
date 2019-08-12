@@ -238,10 +238,9 @@ body {
 
 .search-input-box {
   border: none;
-  color: #444;
   font-size: 0.9rem;
   text-align: left;
-  width: 150px;
+  width: 200px;
   margin-left: 5px;
   height: 19px;
   margin-top: 10px;
@@ -281,10 +280,11 @@ body {
   margin-top: -10px;
   margin-left: -10px;
 }
-/* 
+
 select {
   background: none;
   border: none;
-  margin-left: 40px;
-  margin-top: 5px;
-} */
+  margin-left: 90px;
+  margin-top: 9px;
+  appearance: none;
+}
