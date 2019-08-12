@@ -1,6 +1,7 @@
 /* Helper functions for app:
 Get current location from Geolocation API
 Get weather at current location using Openweather API
+Retrieve one random quote from Quotes REST API
 */
 const API_KEY = '0e8c6a8ba216d2b0fafe868b7bf978c3';
 
@@ -36,8 +37,20 @@ export function callWeatherApi(val) {
         if (resp.ok) {
             return resp.json()
         } else {
-            return Promise.reject("Openweathermap data unable to load");
+            return Promise.reject('Openweathermap data unable to load');
         }
         }).catch(error => console.log('Error: ', error));
     
+}
+
+export function callQuoteApi() {
+
+    const QUOTE_URL = 'http://quotes.rest/qod.json?category=inspire';
+    return fetch(QUOTE_URL).then(resp => {
+        if (resp.ok) {
+            return resp.json();
+        } else {
+            return Promise.reject('Unable to retrieve quote');
+        }
+    }).catch(e => console.log('Error: ', e));
 }
