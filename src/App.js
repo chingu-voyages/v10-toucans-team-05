@@ -2,7 +2,7 @@ import React from "react";
 import "./styling/App.css";
 import TopContainer from "./components/TopContainer";
 import MiddleContainer from "./components/MiddleContainer";
-// import Quote from "./components/Quote";
+import Quote from "./components/Quote";
 import Todo from "./components/Todo";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <TopContainer />
       <MiddleContainer />
 
-      {/* <Quote /> */}
+      <Quote />
       <Todo />
     </div>
   );
