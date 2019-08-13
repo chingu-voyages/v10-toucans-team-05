@@ -48,7 +48,6 @@ export function callQuoteApi() {
     const QUOTE_URL = 'http://quotes.rest/qod.json?category=inspire';
     return fetch(QUOTE_URL).then(resp => {
         if (resp.ok) {
-            console.log(resp.status);
             return resp.json();
         } else {
             return Promise.reject('Unable to retrieve quote');
