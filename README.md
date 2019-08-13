@@ -2,7 +2,11 @@
 
 ---
 
-The momentum clone is a basic frontend webpage that visually looks simliar to the actual chrome extension.
+The Momentum clone is a basic frontend webpage that visually looks similar to the [Chrome extension](https://momentumdash.com/).
+
+Visual elements include a personalized greeting, a high-quality photo background, current location and weather display, and a motivational quote.
+
+Productivity tools include customized links, embedded Google search, customizable "main task," and to-do list.
 
 Voyage-10 | https://chingu.io/
 
@@ -35,14 +39,15 @@ Our motivation for picking this specific clone was it challenged us to get detai
 - **_ReactJS_** - w/ hooks
 - **_Font Family_** - "Neue Haas Grotesk Text Pro",
   "Helvetica Neue", Helvetica, Arial, sans-serif
-- **_Background Image_**- Unsplash Random Daily Image
-- **_Weather_** - OpenWeather API
+- **_Background Image_**- [Unsplash Random Daily Image](https://source.unsplash.com/)
+- **_Weather_** - [OpenWeather Current Weather Data API](https://openweathermap.org/current)
 - **_CSS_** - Flexbox & Bootstrap 4
-- **_Quotes_** -
+- **_Quotes_** - [Quotes REST API](https://theysaidso.com/api/)
 
 #### Technical Learning
 
 - Using new React functional components along with hooks
 - Layout items with flexbox
-- Using Apis
+- Using APIs
 - Local Storage
+- Async/await
