@@ -47,23 +47,20 @@ export function callWeatherApi(val) {
 export const showDropdown = (index, className) => {
   console.log("click", className);
   let dropdown = document.getElementsByClassName(className);
-
   if (dropdown[index].style.display === "block") {
     dropdown[index].style.display = "none";
   } else {
     dropdown[index].style.display = "block";
   }
 };
+
 export function callQuoteApi() {
-  const QUOTE_URL = "http://quotes.rest/qod.json?category=inspire";
-  return fetch(QUOTE_URL)
-    .then(resp => {
-      if (resp.ok) {
-        console.log(resp.status);
-        return resp.json();
-      } else {
-        return Promise.reject("Unable to retrieve quote");
-      }
-    })
-    .catch(e => console.log("Error: ", e));
+    const QUOTE_URL = 'http://quotes.rest/qod.json?category=inspire';
+    return fetch(QUOTE_URL).then(resp => {
+        if (resp.ok) {
+            return resp.json();
+        } else {
+            return Promise.reject('Unable to retrieve quote');
+        }
+    }).catch(e => console.log('Error: ', e));
 }
