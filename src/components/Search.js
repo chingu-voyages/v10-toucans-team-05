@@ -91,7 +91,6 @@ const Search = () => {
                   value={browser.name}
                   className="dropdown-item">
                   {browser.name}
-                  {console.log(currentBrowser)}
                 </option>
               ))}
             </select>

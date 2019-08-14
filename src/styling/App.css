@@ -4,13 +4,10 @@ html {
 }
 
 body {
-  background-image: url("https://source.unsplash.com/daily?mountains");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 1%;
-  height: 100vh;
 }
 
 .hide {
@@ -21,10 +18,15 @@ body {
   color: #fff;
 }
 
-.top-container {
+.top-container,
+.lower-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.middle-container {
+  height: 60vh;
 }
 .dropdown {
   background-color: rgba(15, 15, 15, 0.925);
@@ -66,10 +68,6 @@ body {
   align-items: center;
 }
 
-.main-goal h2 {
-  font-weight: normal;
-}
-
 [class*="input-"] {
   border: none;
   background: transparent;
@@ -80,6 +78,10 @@ body {
   color: #fff;
   text-align: center;
   height: 20px;
+}
+
+.main-goal h2 {
+  font-weight: normal;
 }
 
 [class*="input-"]:focus {
@@ -117,19 +119,22 @@ body {
 
 .quote {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.quote-text {
+  font-size: 1.2rem;
 }
 
-.quote span.quote-attr {
-  z-index:50;
-  font-size:1rem;
+.quote-attr {
+  font-size: 1rem;
   padding-left: 5px;
 }
 
-.quote span.quote-attr a {
-  color:white; 
-  margin-left: 4px; 
+.quote-attr a {
+  color: #fff;
+  margin-left: 4px;
   vertical-align: middle;
 }
 
@@ -138,12 +143,12 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 30vh;
 }
 
-.todo h4 {
+.todo p {
   cursor: pointer;
   justify-content: flex-end;
+  font-size: 1.2rem;
 }
 
 .todo-lightbox {
@@ -235,7 +240,8 @@ body {
 }
 
 .link-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 5px;
 }
 .search-dropdown-options {
   position: absolute;
@@ -300,4 +306,26 @@ select {
   margin-left: 90px;
   margin-top: 9px;
   appearance: none;
+}
+
+/* settings */
+.settings {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: flex-end;
+  padding-bottom: 1%;
+}
+
+.author-info {
+  display: flex;
+  flex-flow: column wrap;
+  font-style: italic;
+}
+
+.fa-cog {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  margin-right: 10px;
 }
