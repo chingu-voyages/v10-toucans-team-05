@@ -41,8 +41,5 @@
     "url": "git+https://github.com/chingu-voyages/v10-toucans-team-05.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chingu-voyages/v10-toucans-team-05/issues"
-  }
+  "license": "ISC"
 }
