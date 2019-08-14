@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import { imageDetails } from "../utils";
 const Settings = ({ imageInfo }) => {
-  {
-    console.log(imageInfo);
-  }
   return (
     <div className="settings">
       <i className="fas fa-cog white" />

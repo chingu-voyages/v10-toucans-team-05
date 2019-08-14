@@ -51,7 +51,7 @@ const Search = () => {
 
   const keyPress = e => {
     if (e.which === 13) {
-      if (currentBrowser == "DuckDuckGo") {
+      if (currentBrowser === "DuckDuckGo") {
         window.open(
           `http://${currentBrowser.toLowerCase()}.com/?q=${newInputName}`
         );
