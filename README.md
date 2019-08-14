@@ -39,7 +39,7 @@ Our motivation for picking this specific clone was it challenged us to get detai
 - **_ReactJS_** - w/ hooks
 - **_Font Family_** - "Neue Haas Grotesk Text Pro",
   "Helvetica Neue", Helvetica, Arial, sans-serif
-- **_Background Image_**- [Unsplash Random Daily Image](https://source.unsplash.com/)
+- **_Background Image_**- [Unsplash Random Image](https://api.unsplash.com/)
 - **_Weather_** - [OpenWeather Current Weather Data API](https://openweathermap.org/current)
 - **_CSS_** - Flexbox & Bootstrap 4
 - **_Quotes_** - [Quotes REST API](https://theysaidso.com/api/)
@@ -50,4 +50,4 @@ Our motivation for picking this specific clone was it challenged us to get detai
 - Layout items with flexbox
 - Using APIs
 - Local Storage
-- Async/await
+- Async/Await

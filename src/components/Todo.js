@@ -8,11 +8,10 @@ const Todo = () => {
 
   return (
     <div className="todo">
-      <div>
-        <h4 className="white" onClick={openTodoLightbox}>
-          Todo
-        </h4>
-      </div>
+      <p className="white" onClick={openTodoLightbox}>
+        Todo
+      </p>
+
       <TodoLightBox />
     </div>
   );
