@@ -2,6 +2,7 @@
   "name": "momentum-clone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://chingu-voyages.github.io/v10-toucans-team-05",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,7 +12,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,15 +33,16 @@
   },
   "description": "Add-project-description-here | Voyage-10 | https://chingu.io/",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vonetta/v10-toucans-team-05.git"
+    "url": "git+https://github.com/chingu-voyages/v10-toucans-team-05.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vonetta/v10-toucans-team-05/issues"
-  },
-  "homepage": "https://github.com/vonetta/v10-toucans-team-05#readme"
-}
+    "url": "https://github.com/chingu-voyages/v10-toucans-team-05/issues"
+  }
+  
